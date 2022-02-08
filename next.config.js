@@ -6,6 +6,6 @@ module.exports = withPWA({
         dest: 'public'
     },
     images: {
-        domains: ['media-exp1.licdn.com']
+        domains: ['i.ibb.co']
     }
 })
