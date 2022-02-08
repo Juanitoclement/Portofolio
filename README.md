@@ -1,6 +1,4 @@
-# Portfolio
-
-![views](https://githits.vercel.app/api/views?user=kausko&repo=Portfolio&mode=dark&disable=Total)
+# My Portfolio
 
 ## Tech Stack
 
@@ -12,8 +10,10 @@
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## How to personalize
-- Press [![image](https://img.shields.io/badge/Use%20this%20template-2EA043?style=for-the-badge)](https://github.com/kausko/Portfolio/generate) to clone this template to your Github account
-- Clone the newly created repository in your account to your local machine
+
+[//]: # (- Press [![image]&#40;https://img.shields.io/badge/Use%20this%20template-2EA043?style=for-the-badge&#41;]&#40;https://github.com/kausko/Portfolio/generate&#41; to clone this template to your Github account)
+[//]: # (- Clone the newly created repository in your account to your local machine)
+[//]: # (- Pat : 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)
 - Customize the following files with your own information
     - `data.json` with your
         - Name (appears in Navbar)

@@ -31,6 +31,8 @@ export async function getStaticProps() {
     repos.map(
       async name => {
         const repo = await fetch(baseURI + name, reqInit).then(res => res.json());
+
+        console.log('helo world', repo)
         const langs = await fetch(baseURI + name + "/languages", reqInit).then(res => res.json())
         return {
           ...repo,
