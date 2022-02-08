@@ -13,7 +13,6 @@
 
 [//]: # (- Press [![image]&#40;https://img.shields.io/badge/Use%20this%20template-2EA043?style=for-the-badge&#41;]&#40;https://github.com/kausko/Portfolio/generate&#41; to clone this template to your Github account)
 [//]: # (- Clone the newly created repository in your account to your local machine)
-[//]: # (- Pat : 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)
 - Customize the following files with your own information
     - `data.json` with your
         - Name (appears in Navbar)
