@@ -37,9 +37,6 @@ export default function Projects({ data, projectsUrl }) {
     const animRef = useRef(null)
     const animate = useAnimate(animRef)
 
-
-    console.log('helo world', projectsUrl)
-
     return (
         <Grid direction="row-reverse" container justify="center" alignItems="center" spacing={10} className={classes.cont}>
             <Grid item xs={12} lg={6}>
@@ -86,65 +83,65 @@ export default function Projects({ data, projectsUrl }) {
                         </Grid>
                     )
                 }
-                {
-                    !!data && data.map((v, i) =>
-                        <Grid item sm={6} xs={12} key={i}>
-                            <Fade in={animate} style={{ transitionDelay: `${200 * i}ms` }}>
-                                <Card key={i} className={classes.card}>
-                                    <CardActionArea
-                                        className={classes.cardActionArea}
-                                        href={v.value.html_url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <CardHeader
-                                            title={<><RepoIcon verticalAlign='middle' /> {v.value.name}</>}
-                                            subheader={
-                                                <>
-                                                    {
-                                                        !!v.value.stargazers_count &&
-                                                        <>
-                                                            <StarIcon verticalAlign='middle' />
-                                                            {v.value.stargazers_count}
-                                                        </>
-                                                    }
-                                                    {
-                                                        !!v.value.forks &&
-                                                        <>
-                                                            <RepoForkedIcon verticalAlign='middle' />
-                                                            {v.value.forks}
-                                                        </>
-                                                    }
-                                                </>
-                                            }
-                                        />
-                                        <CardContent>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                {v.value.description}
-                                            </Typography>
-                                        </CardContent>
-                                        <CardActions>
-                                            <Grid container direction="row" spacing={1}>
-                                                {
-                                                    !!v.value.languages &&
-                                                    v.value.languages.map((lang, i) =>
-                                                        <Grid item key={i}>
-                                                            <Chip
-                                                                key={i}
-                                                                label={lang}
-                                                                size="small"
-                                                            />
-                                                        </Grid>
-                                                    )
-                                                }
-                                            </Grid>
-                                        </CardActions>
-                                    </CardActionArea>
-                                </Card>
-                            </Fade>
-                        </Grid>
-                    )
-                }
+                {/*{*/}
+                {/*    !!data && data.map((v, i) =>*/}
+                {/*        <Grid item sm={6} xs={12} key={i}>*/}
+                {/*            <Fade in={animate} style={{ transitionDelay: `${200 * i}ms` }}>*/}
+                {/*                <Card key={i} className={classes.card}>*/}
+                {/*                    <CardActionArea*/}
+                {/*                        className={classes.cardActionArea}*/}
+                {/*                        href={v.value.html_url}*/}
+                {/*                        target="_blank"*/}
+                {/*                        rel="noopener noreferrer"*/}
+                {/*                    >*/}
+                {/*                        <CardHeader*/}
+                {/*                            title={<><RepoIcon verticalAlign='middle' /> {v.value.name}</>}*/}
+                {/*                            subheader={*/}
+                {/*                                <>*/}
+                {/*                                    {*/}
+                {/*                                        !!v.value.stargazers_count &&*/}
+                {/*                                        <>*/}
+                {/*                                            <StarIcon verticalAlign='middle' />*/}
+                {/*                                            {v.value.stargazers_count}*/}
+                {/*                                        </>*/}
+                {/*                                    }*/}
+                {/*                                    {*/}
+                {/*                                        !!v.value.forks &&*/}
+                {/*                                        <>*/}
+                {/*                                            <RepoForkedIcon verticalAlign='middle' />*/}
+                {/*                                            {v.value.forks}*/}
+                {/*                                        </>*/}
+                {/*                                    }*/}
+                {/*                                </>*/}
+                {/*                            }*/}
+                {/*                        />*/}
+                {/*                        <CardContent>*/}
+                {/*                            <Typography variant="body2" color="textSecondary" component="p">*/}
+                {/*                                {v.value.description}*/}
+                {/*                            </Typography>*/}
+                {/*                        </CardContent>*/}
+                {/*                        <CardActions>*/}
+                {/*                            <Grid container direction="row" spacing={1}>*/}
+                {/*                                {*/}
+                {/*                                    !!v.value.languages &&*/}
+                {/*                                    v.value.languages.map((lang, i) =>*/}
+                {/*                                        <Grid item key={i}>*/}
+                {/*                                            <Chip*/}
+                {/*                                                key={i}*/}
+                {/*                                                label={lang}*/}
+                {/*                                                size="small"*/}
+                {/*                                            />*/}
+                {/*                                        </Grid>*/}
+                {/*                                    )*/}
+                {/*                                }*/}
+                {/*                            </Grid>*/}
+                {/*                        </CardActions>*/}
+                {/*                    </CardActionArea>*/}
+                {/*                </Card>*/}
+                {/*            </Fade>*/}
+                {/*        </Grid>*/}
+                {/*    )*/}
+                {/*}*/}
             </Grid>
         </Grid>
     )
