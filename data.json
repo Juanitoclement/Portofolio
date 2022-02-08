@@ -74,10 +74,35 @@
         "baseURI": "https://api.github.com/repos/Juanitoclement/",
         "repositories": [
             "FE-SmartHome",
-            "Ajaib-Frontend",
-            "generictech",
             "neural_raphsody_FE",
             "AngularMyPetRepublic"
+        ],
+        "projectsUrl": [
+            {
+                "name": "Sukses Lestari",
+                "url": "https://www.sukseslestari.com",
+                "imageUrl": "https://i.ibb.co/RYpb2PF/sukseslestari.png"
+            },
+            {
+                "name": "Random User Table",
+                "url": "https://ajaib-clement.netlify.app",
+                "imageUrl": "https://i.ibb.co/JzrYG46/random-user-table.png"
+            },
+            {
+                "name": "Nearby Food Discovery",
+                "url": "https://appyogurt.netlify.app",
+                "imageUrl": "https://i.ibb.co/JFtN595/nearby-food-discovery.png"
+            },
+            {
+                "name": "Random Planet List",
+                "url": "https://planet-evos.netlify.app",
+                "imageUrl": "https://i.ibb.co/f8tFGMy/random-planet-list.png"
+            },
+            {
+                "name": "Generic Technology",
+                "url": "https://generictech.netlify.app",
+                "imageUrl": "https://i.ibb.co/2sT5QNw/generictech.png"
+            }
         ]
     },
     "experience": {

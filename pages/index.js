@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme => ({
 export async function getStaticProps() {
   const baseURI = projects.baseURI
   const repos = projects.repositories
+  const projectsUrl = projects.projectsUrl
   const reqInit = {
     headers: { 
       'Authorization': `token ${process.env.PAT}`
@@ -44,13 +45,14 @@ export async function getStaticProps() {
 
   return {
     props: {
-      projects: fullRepoData
+      projects: fullRepoData,
+      projectsUrl: projectsUrl
     },
     revalidate: 60
   }
 }
 
-export default function Index({ projects, setTheme }) {
+export default function Index({ projects, projectsUrl, setTheme }) {
 
   const classes = useStyles()
 
@@ -78,7 +80,7 @@ export default function Index({ projects, setTheme }) {
       <Container>
         <Landing />
         <Skills />
-        <Projects data={projects}/>
+        <Projects data={projects} projectsUrl={projectsUrl}/>
         <Experience/>
         <About/>
       </Container>

@@ -1,4 +1,17 @@
-import { Card, CardActionArea, CardActions, CardContent, CardHeader, Chip, Fade, Grid, Hidden, makeStyles, Typography } from "@material-ui/core";
+import {
+    Card,
+    CardActionArea,
+    CardActions,
+    CardContent,
+    CardHeader,
+    CardMedia,
+    Chip,
+    Fade,
+    Grid,
+    Hidden,
+    makeStyles,
+    Typography
+} from "@material-ui/core";
 import { RepoForkedIcon, RepoIcon, StarIcon } from '@primer/octicons-react';
 import Image from 'next/image'
 import { useRef } from "react";
@@ -17,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-export default function Projects({ data }) {
+export default function Projects({ data, projectsUrl }) {
 
     const classes = useStyles()
 
@@ -25,7 +38,7 @@ export default function Projects({ data }) {
     const animate = useAnimate(animRef)
 
 
-    console.log('helo world', data)
+    console.log('helo world', projectsUrl)
 
     return (
         <Grid direction="row-reverse" container justify="center" alignItems="center" spacing={10} className={classes.cont}>
@@ -47,6 +60,32 @@ export default function Projects({ data }) {
                 </Hidden>
             </Grid>
             <Grid container item xs={12} lg={6} direction="row" spacing={1}>
+                {
+                    !!projectsUrl && projectsUrl.map((v, i) =>
+                        <Grid item sm={6} xs={12} key={i}>
+                            <Fade in={animate} style={{ transitionDelay: `${200 * i}ms` }}>
+                                <Card key={i} className={classes.card}>
+                                    <CardActionArea
+                                        className={classes.cardActionArea}
+                                        href={v.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <CardMedia
+                                            component="img"
+                                            height="140"
+                                            image={v.imageUrl}
+                                            alt="image"
+                                        />
+                                        <CardHeader
+                                            title={v.name}
+                                        />
+                                    </CardActionArea>
+                                </Card>
+                            </Fade>
+                        </Grid>
+                    )
+                }
                 {
                     !!data && data.map((v, i) =>
                         <Grid item sm={6} xs={12} key={i}>
